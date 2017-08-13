@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular2 playground</title>
+    <base href="/">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <hello-app>Loading...</hello-app>
+</body>
+
+<!-- ES6-related imports -->
+<script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="/node_modules/systemjs/dist/system.js"></script>
+<script>
+    //configure system loader
+    System.config({defaultJSExtensions: true});
+</script>
+<script src="/node_modules/rxjs/bundles/Rx.js"></script>
+<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+<script src="/node_modules/angular2/bundles/http.min.js"></script>
+<script src="/node_modules/angular2/bundles/router.dev.js"></script>
+<script>
+    //bootstrap the Angular2 application
+    System.import('dist/hello').catch(console.log.bind(console));
+</script>
+
+</html>
